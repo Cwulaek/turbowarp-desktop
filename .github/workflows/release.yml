@@ -53,7 +53,10 @@ jobs:
     - name: Upload Release Assets
       uses: softprops/action-gh-release@v2
       with:
-        files: D:\repo\dist\linux.zip
+        files: |
+          dist/*.deb
+          dist/*.tar.gz
+          dist/*.AppImage
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -209,6 +212,6 @@ jobs:
     - name: Upload Release Assets
       uses: softprops/action-gh-release@v2
       with:
-        files: D:\repo\dist\windows-signed.*
+        files: D:\repo\dist\TurboWarp-Setup*x64.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
