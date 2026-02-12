@@ -4,7 +4,11 @@ TurboWarp as a desktop app.
 
 I forked this just for building desktop-ver of [this](https://github.com/Cwulaek/scratch-gui)
 
-If you're looking for downloads, head to the release page.
+I've met some situation using local packaging, so I have to use Github Action instead..
+
+Wondering anywhere is a good way to make a desktop ver Turbowarp with custom addons..
+
+If you're looking for downloads, head to the release page. (note: I have no sign of the app)
 
 There's no change after this line of the origin README.md
 
