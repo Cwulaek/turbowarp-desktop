@@ -4,9 +4,9 @@ TurboWarp as a desktop app.
 
 I forked this just for building desktop-ver of [this](https://github.com/Cwulaek/scratch-gui)
 
-no change after this line of the origin README.md
-
 If you're looking for downloads, head to the release page.
+
+There's no change after this line of the origin README.md
 
 -----
 
