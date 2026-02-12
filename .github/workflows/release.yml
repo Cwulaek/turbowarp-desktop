@@ -48,8 +48,8 @@ jobs:
         node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.deb"
         node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.tar.gz"
         node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.AppImage"
-    #   env:
-    #     GH_TOKEN: "${{ github.token }}"
+      env:
+        GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
   # sorry for skip
   # release-mac:
@@ -199,5 +199,5 @@ jobs:
       working-directory: D:\repo
       run: |
         node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.exe"
-    #   env:
-    #     GH_TOKEN: "${{ github.token }}"
+      env:
+        GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
