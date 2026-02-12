@@ -2,7 +2,13 @@
 
 TurboWarp as a desktop app.
 
-If you're looking for downloads, head to: https://desktop.turbowarp.org/
+I forked this just for building desktop-ver of [this](https://github.com/Cwulaek/scratch-gui)
+
+no change after this line of the origin README.md
+
+If you're looking for downloads, head to the release page.
+
+-----
 
 Licensed under the GPLv3.0. See LICENSE for more information.
 
