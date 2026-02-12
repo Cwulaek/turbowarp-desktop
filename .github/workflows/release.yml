@@ -10,46 +10,47 @@ permissions:
   contents: write
 
 jobs:
-  release-linux:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        submodules: recursive
-        persist-credentials: false
-    - name: Install strip-nondeterminism
-      run: sudo apt-get install strip-nondeterminism
-    - name: Install Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 24
-    - name: Install dependencies
-      run: npm ci --loglevel=info
-    - name: Fetch
-      run: npm run fetch
-    - name: Compile
-      run: npm run webpack:prod
-    - name: Package
-      run: |
-        node release-automation/build.mjs --debian --tarball --appimage --x64 --armv7l --arm64 --production
-    - name: Print file tree
-      run: node scripts/print-file-tree.mjs dist
-    - name: Upload artifacts to GitHub Actions
-      uses: actions/upload-artifact@v4
-      with:
-        name: linux
-        path: |
-          dist/*.deb
-          dist/*.tar.gz
-          dist/*.AppImage
-    - name: Upload artifacts to tag
-      run: |
-        node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.deb"
-        node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.tar.gz"
-        node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.AppImage"
-      env:
-        GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+  # sorry for skip
+  # release-linux:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Checkout
+  #     uses: actions/checkout@v4
+  #     with:
+  #       submodules: recursive
+  #       persist-credentials: false
+  #   - name: Install strip-nondeterminism
+  #     run: sudo apt-get install strip-nondeterminism
+  #   - name: Install Node.js
+  #     uses: actions/setup-node@v4
+  #     with:
+  #       node-version: 24
+  #   - name: Install dependencies
+  #     run: npm ci --loglevel=info
+  #   - name: Fetch
+  #     run: npm run fetch
+  #   - name: Compile
+  #     run: npm run webpack:prod
+  #   - name: Package
+  #     run: |
+  #       node release-automation/build.mjs --debian --tarball --appimage --x64 --armv7l --arm64 --production
+  #   - name: Print file tree
+  #     run: node scripts/print-file-tree.mjs dist
+  #   - name: Upload artifacts to GitHub Actions
+  #     uses: actions/upload-artifact@v4
+  #     with:
+  #       name: linux
+  #       path: |
+  #         dist/*.deb
+  #         dist/*.tar.gz
+  #         dist/*.AppImage
+    # - name: Upload artifacts to tag
+    #   run: |
+    #     node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.deb"
+    #     node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.tar.gz"
+    #     node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.AppImage"
+    #   env:
+    #     GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
 
   # sorry for skip
   # release-mac:
@@ -195,9 +196,15 @@ jobs:
         # keep this list in sync with the signpath artifact upload above
         path: |
           D:\repo\dist\TurboWarp-Setup*x64.exe
-    - name: Upload signed artifacts to tag
-      working-directory: D:\repo
-      run: |
-        node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.exe"
+    # - name: Upload signed artifacts to tag
+    #   working-directory: D:\repo
+    #   run: |
+    #     node scripts/upload-to-github-releases.mjs TurboWarp desktop "dist/*.exe"
+    #   env:
+    #     GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+    - name: Upload Release Assets
+      uses: softprops/action-gh-release@v2
+      with:
+        files: dist/*.exe
       env:
-        GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
