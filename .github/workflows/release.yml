@@ -184,7 +184,7 @@ jobs:
         name: artifact-for-signpath
         # keep this list in sync with the signed artifiact upload below
         path: |
-          D:/repo/dist/TurboWarp-Setup*x64.exe
+          D:/repo/dist/*.exe
     # - name: Sign executables with SignPath
     #   uses: signpath/github-action-submit-signing-request@4f13d373e8f0cd8d3c0465ff4877feff27aed2ae
     #   with:
@@ -203,7 +203,7 @@ jobs:
         name: windows-signed
         # keep this list in sync with the signpath artifact upload above
         path: |
-          D:/repo/dist/TurboWarp-Setup*x64.exe
+          D:/repo/dist/TurboWarpWCA-Setup*x64.exe
     # - name: Upload signed artifacts to tag
     #   working-directory: D:\repo
     #   run: |
@@ -214,6 +214,6 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         files: |
-          D:/repo/dist/TurboWarp-Setup*x64.exe
+          D:/repo/dist/TurboWarpWCA-Setup*x64.exe
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

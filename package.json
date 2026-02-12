@@ -61,7 +61,7 @@
   "main": "./src-main/entrypoint.js",
   "build": {
     "appId": "org.turbowarpwca.desktop",
-    "productName": "TurboWarp with Custom Addon",
+    "productName": "TurboWarpWCA",
     "files": [
       "node_modules/**/*",
       "src-main/**/*",
