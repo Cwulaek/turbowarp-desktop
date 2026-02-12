@@ -6,7 +6,7 @@ I forked this just for building desktop-ver of [this](https://github.com/Cwulaek
 
 I've met some situation using local packaging, so I have to use Github Action instead..
 
-Wondering anywhere is a good way to make a desktop ver Turbowarp with custom addons..
+Sorry for skip providing Mac ver. 
 
 If you're looking for downloads, head to the release page. (note: I have no sign of the app)
 
