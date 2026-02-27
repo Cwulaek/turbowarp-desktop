@@ -24,7 +24,7 @@
     "@babel/preset-env": "^7.12.16",
     "@babel/preset-react": "^7.13.13",
     "@electron/fuses": "^2.0.0",
-    "@turbowarp/extensions": "github:TurboWarp/extensions#master",
+    "@turbowarp/extensions": "git+https://github.com/TurboWarp/extensions.git#master",
     "adm-zip": "^0.5.16",
     "autoprefixer": "^9.8.8",
     "babel-loader": "^8.4.1",
@@ -38,7 +38,7 @@
     "postcss-import": "^14.0.0",
     "postcss-loader": "^4.2.0",
     "postcss-simple-vars": "^6.0.3",
-    "scratch-gui": "github:Cwulaek/scratch-gui#develop",
+    "scratch-gui": "git+https://github.com/Cwulaek/scratch-gui.git#develop",
     "style-loader": "^0.23.0",
     "url-loader": "^4.1.1",
     "webpack": "4.47.0",
@@ -49,7 +49,7 @@
       "terser-webpack-plugin": "^4.2.3"
     }
   },
-  "homepage": "https://cwulaek.github.io/scratch-gui/build/edit.html",
+  "homepage": "git+https://cwulaek.github.io/scratch-gui/build/edit.html",
   "repository": {
     "type": "git",
     "url": "https://github.com/Cwulaek/desktop.git"
