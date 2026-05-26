@@ -1,7 +1,7 @@
 {
   "name": "turbowarp-desktop-with-custom-addon",
   "description": "Scratch mod with a compiler, dark mode, a bunch of addons, and more. AND MORE!!!",
-  "version": "1.15.2-beta.3",
+  "version": "1.15.5-beta",
   "license": "GPL-3.0",
   "author": {
     "email": "contact@turbowarp.org",
@@ -38,7 +38,7 @@
     "postcss-import": "^14.0.0",
     "postcss-loader": "^4.2.0",
     "postcss-simple-vars": "^6.0.3",
-    "scratch-gui": "git+https://github.com/Cwulaek/scratch-gui.git#develop",
+    "scratch-gui": "github:Cwulaek/scratch-gui#develop",
     "style-loader": "^0.23.0",
     "url-loader": "^4.1.1",
     "webpack": "4.47.0",
